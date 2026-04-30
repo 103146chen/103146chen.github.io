@@ -1,96 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陳子祥 (Tzu-Hsiang Chen) | 個人主頁</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        :root { --primary-color: #2c3e50; --accent-color: #3498db; }
-        body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f6f8; }
-        .container { max-width: 900px; margin: 0 auto; background: #fff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-        
-        /* 個人簡介區 */
-        header { background: var(--primary-color); color: white; padding: 60px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
-        header .title { font-size: 1.1em; opacity: 0.8; margin-top: 10px; font-weight: 300; }
-        
-        /* 內容區 */
-        .content { padding: 40px; }
-        section { margin-bottom: 50px; }
-        h2 { border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; color: var(--primary-color); font-size: 1.5em; margin-bottom: 20px; }
-        
-        /* 專案卡片樣式 */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .project-card { border: 1px solid #eee; border-radius: 8px; padding: 25px; transition: transform 0.2s, box-shadow 0.2s; background: #fff; }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .project-card h3 { margin-top: 0; color: var(--accent-color); }
-        .project-card p { color: #666; font-size: 0.95em; }
-        .btn-link { display: inline-block; margin-top: 15px; text-decoration: none; color: white; background: var(--accent-color); padding: 8px 15px; border-radius: 4px; font-size: 0.9em; }
-        .btn-link:hover { background: #2980b9; }
-
-        /* 頁尾 */
-        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9em; border-top: 1px solid #eee; }
-        
-        /* RWD */
-        @media (max-width: 600px) {
-            header { padding: 40px 20px; }
-            .content { padding: 20px; }
-        }
-    </style>
+    <title>教學檔案庫 | 個人主頁</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>教學檔案庫</h1>
+            </div>
 
-<div class="container">
-    <header>
-        <h1>陳子祥</h1>
-        <div class="title">Tzu-Hsiang Chen</div>
-        <p>Teacher & Developer</p>
-    </header>
+            <nav class="navigation">
+                <div class="accordion">
+                    <!-- 年級層級 -->
+                    <details name="grade">
+                        <summary>高一</summary>
+                        <div class="details-content">
+                            <details name="semester-1">
+                                <summary>第一學期</summary>
+                                <ul class="lesson-list">
+                                    <li><a href="#">第一課</a></li>
+                                    <li><a href="#">第二課</a></li>
+                                </ul>
+                            </details>
+                            <details name="semester-1">
+                                <summary>第二學期</summary>
+                                <ul class="lesson-list">
+                                    <li><a href="#">第一課</a></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </details>
 
-    <div class="content">
-        
-        <section>
-            <h2>關於我 (About Me)</h2>
-            <p>你好！我是陳子祥。我熱衷於教育與程式開發，致力於利用科技解決教學現場的問題，提升行政效率與學生輔導品質。</p>
-        </section>
+                    <details name="grade">
+                        <summary>高二</summary>
+                        <div class="details-content">
+                            <details name="semester-2">
+                                <summary>第一學期</summary>
+                                <ul class="lesson-list">
+                                    <li><a href="#">第一課</a></li>
+                                </ul>
+                            </details>
+                            <details name="semester-2">
+                                <summary>第二學期</summary>
+                                <p class="empty">暫無資料</p>
+                            </details>
+                        </div>
+                    </details>
 
-        <section>
-            <h2>專案作品 (Projects)</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <h3>全民成績發送平台</h3>
-                    <p>Grade Sender Platform</p>
-                    <p>一個基於 Google Apps Script 開發的開源工具，協助老師將 Google 試算表上的成績，自動化寄送個別通知信給學生與家長。</p>
-                    <p style="font-size: 0.85em; color: #aaa;">Status: Verified ✅</p>
-                    
-                    <a href="/ScoreSender/" class="btn-link">前往專案頁面 &rarr;</a>
+                    <details name="grade">
+                        <summary>高三</summary>
+                        <div class="details-content">
+                            <details name="semester-3">
+                                <summary>第一學期</summary>
+                                <p class="empty">暫無資料</p>
+                            </details>
+                            <details name="semester-3">
+                                <summary>第二學期</summary>
+                                <p class="empty">暫無資料</p>
+                            </details>
+                        </div>
+                    </details>
                 </div>
+            </nav>
 
-                </div>
-        </section>
+            <footer class="sidebar-footer">
+                <p>© 2026</p>
+            </footer>
+        </aside>
 
-        <section>
-            <h2>聯絡資訊 (Contact)</h2>
-            <p>如果您有任何合作提案或問題，歡迎聯繫：</p>
-            <p>📧 Email: <a href="mailto:103116chen@gmail.com">103116chen@gmail.com</a></p>
-        </section>
-
-        <section style="border-top: 1px dashed #ddd; padding-top: 20px; margin-top: 40px;">
-            <p style="font-size: 0.9em; color: #888;">
-                網站文件：
-                <a href="privacy-policy.pdf" target="_blank" style="color: #888; text-decoration: underline;">隱私權政策 (Privacy Policy)</a>
-            </p>
-        </section>
-
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h2>歡迎使用</h2>
+                <p>請從左側選單選擇分類以查看檔案</p>
+            </div>
+            <div class="content-placeholder">
+                <!-- 資料將顯示於此 -->
+            </div>
+        </main>
     </div>
-
-    <footer>
-        &copy; 2025 Tzu-Hsiang Chen. All rights reserved.
-    </footer>
-</div>
-
 </body>
 </html>
